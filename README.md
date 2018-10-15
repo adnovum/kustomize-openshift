@@ -21,7 +21,7 @@ resource like this:
         kind: Service
         name: myapp
 
-...kubernetes will not modify the "spec.to.name" appropriately.
+...kustomize will not modify the "spec.to.name" appropriately.
 
 Thanks to "crds" mechanism that was
 [implemented](https://github.com/kubernetes-sigs/kustomize/issues/42) in
