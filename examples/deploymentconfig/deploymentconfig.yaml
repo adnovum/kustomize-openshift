@@ -1,0 +1,41 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  generation: 1
+  name: gzd-batchkette-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  strategy:
+    type: Rolling
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        deployment-config.name: gzd-batchkette-ui
+    spec:
+      containers:
+      - image: >-
+          docker-registry.default.svc:5000/sclorg/nginx-ex
+        imagePullPolicy: Always
+        name: default-container
+        volumeMounts:
+        - mountPath: /etc/opt/rh/rh-nginx112/nginx/conf.d/nginx-include.conf
+          name: volume-nginx-include-conf
+          subPath: nginx-include.conf
+      volumes:
+      - configMap:
+          defaultMode: 420
+          items:
+          - key: nginx-include.conf
+            path: nginx-include.conf
+          name: nginx-include-conf
+        name: volume-nginx-include-conf
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  test: false
+  triggers:
+  - type: ConfigChange

@@ -1,0 +1,12 @@
+namePrefix: example-
+
+resources:
+- deploymentconfig.yaml
+
+crds:
+- ../../crds/openshift-deploymentconfig.json
+
+configMapGenerator:
+- name: nginx-include-conf
+  files:
+  - nginx-include.conf
