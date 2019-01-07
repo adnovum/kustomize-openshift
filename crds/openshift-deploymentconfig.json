@@ -14,7 +14,7 @@
 				},
 				"spec": {
 					"$ref": "github.com/adnovum/kustomize-openshift/dc.openshift.io.v1.DeploymentConfigSpec"
-				}§
+				}
 			}
 		}
 	},
