@@ -13,7 +13,7 @@
 					"$ref": "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"
 				},
 				"spec": {
-					"$ref": "github.com/adnovum/kustomize-openshift/route.openshift.io.v1.DeploymentConfigSpec"
+					"$ref": "github.com/adnovum/kustomize-openshift/dc.openshift.io.v1.DeploymentConfigSpec"
 				}
 			}
 		}
