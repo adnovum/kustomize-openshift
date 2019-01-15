@@ -1,5 +1,5 @@
 {
-	"github.com/adnovum/kustomize-openshift/route.openshift.io.v1.DeploymentConfig": {
+	"github.com/adnovum/kustomize-openshift/dc.openshift.io.v1.DeploymentConfig": {
 		"Schema": {
 			"description": "This is a fake CRD description to make kustomize fix OpenShift DeploymentConfig resources. See: https://github.com/adnovum/kustomize-openshift",
 			"properties": {
@@ -18,7 +18,7 @@
 			}
 		}
 	},
-	"github.com/adnovum/kustomize-openshift/route.openshift.io.v1.DeploymentConfigSpec": {
+	"github.com/adnovum/kustomize-openshift/dc.openshift.io.v1.DeploymentConfigSpec": {
 		"Schema": {
 			"properties": {
 				"template/spec/volumes/configMap": {
